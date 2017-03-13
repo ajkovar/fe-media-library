@@ -1,0 +1,15 @@
+<h2>Albums Per Year</h2>
+<ul>
+  {{#each albumsPerYear as |year|}}
+  <li>{{year.name}}: {{year.albums.length}}</li>
+  {{/each}}
+</ul>
+
+<h2>Top 5 Artists</h2>
+<ul>
+  {{#each topFiveArtists as |artist|}}
+  <li>{{artist.name}}: {{artist.albumsSold}} albums sold</li>
+  {{/each}}
+</ul>
+
+<p>{{#link-to "artists.list"}}All Artists{{/link-to}}</p>
